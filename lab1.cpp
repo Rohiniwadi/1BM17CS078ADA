@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-
+ 
+void find(int ,int ,int);
 
 int  main()
 {
