@@ -28,7 +28,8 @@ void find(int N,int k,int a[])
   while(f<=l)
    {
      if(k == a[m])
-      { cout<<"1";}
+      { cout<<"1";
+      break;}
      else if(k<a[m])
       { l=m-1;}
      else
