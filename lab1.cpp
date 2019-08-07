@@ -1,10 +1,34 @@
+
+
 #include<iostream>
+#include<fstream>
 using namespace std;
  
-void find(int ,int ,int);
+
+
+void find(int N,int k,int a[])
+{
+  int f=0;
+  int l=N-1;
+  int m;
+  
+  while(f<=l)
+   { m=(l+f)/2;
+     if(k == a[m])
+      { cout<<"1";
+         break;}
+     else if(k<a[m])
+      { l=m-1;}
+     else
+      {f=m+1;}
+   }
+   if(f>l)
+   { cout<<"-1";}
+}
 
 int  main()
 {
+  freopen("input.txt","r",stdin);
   int t,k,N,a[100];
   cin>>t;
   for(int i=0;i<t;i++)
@@ -19,25 +43,9 @@ int  main()
  return 0;
 }
  
-void find(int N,int k,int a[])
-{
-  int f=0;
-  int l=N-1;
-  int m;
-  m=(l+f)/2;
-  while(f<=l)
-   {
-     if(k == a[m])
-      { cout<<"1";
-      break;}
-     else if(k<a[m])
-      { l=m-1;}
-     else
-      {f=m+1;}
-   }
-   if(f>l)
-   { cout<<"-1";}
-}
+
+
+
     
 
      
